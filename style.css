@@ -384,6 +384,17 @@ body {
   animation-delay: calc(var(--i, 0) * 70ms);
 }
 
+/* 프로필 사진은 움직이지 않고 부드럽게 나타나기만 합니다.
+   (transform 을 움직이면 뒤에 있는 은은한 빛의 층 순서가 바뀌기 때문) */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.avatar.animate {
+  animation-name: fade-in;
+}
+
 /* ---------- 데스크톱 ---------- */
 @media (min-width: 720px) {
   .page {
