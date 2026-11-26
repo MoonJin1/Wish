@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#06060a" />
+  <title>위시</title>
+  <meta name="description" content="모든 사람들에게 친절을 베풀어 주고 싶어요!" />
+
+  <!-- 파비콘: 프로필 첫 글자 -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230d0d15'/%3E%3Ctext x='32' y='44' font-family='-apple-system,sans-serif' font-size='34' font-weight='700' fill='%23a08cff' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 배경 장식 (읽어주는 화면에서는 숨김) -->
+  <div class="backdrop" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="orb orb-c"></span>
+    <span class="vignette"></span>
+  </div>
+
+  <main class="page">
+    <header class="profile">
+      <div class="avatar" id="avatar"></div>
+      <h1 class="name" id="name">위시</h1>
+      <p class="bio" id="bio">모든 사람들에게 친절을 베풀어 주고 싶어요!</p>
+    </header>
+
+    <nav class="links" id="links" aria-label="링크 모음"></nav>
+
+    <footer class="footer">
+      <p id="footer-text">© 위시</p>
+    </footer>
+  </main>
+
+  <!-- 내용은 config.js 에서 수정합니다. (순서를 바꾸지 마세요) -->
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
