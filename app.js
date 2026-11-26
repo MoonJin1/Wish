@@ -185,7 +185,7 @@
       var a = document.createElement("a");
       a.className = "link-card animate";
       a.href = url;
-      a.style.setProperty("--i", String(shown + 1));
+      a.style.setProperty("--i", String(shown + 3));
 
       if (isExternal(url)) {
         a.target = "_blank";
@@ -240,24 +240,27 @@
 
     if (shown === 0) {
       var empty = document.createElement("p");
-      empty.className = "empty";
+      empty.className = "empty animate";
       empty.textContent = configFailed
         ? "config.js 를 읽지 못했어요. 마지막으로 고친 곳의 따옴표와 쉼표를 확인해 주세요."
         : "아직 링크가 없어요. config.js 의 links 에 주소를 추가해 보세요.";
       wrap.appendChild(empty);
     }
+
+    return shown;
   }
 
   /* ---------- 푸터 ---------- */
-  function renderFooter() {
+  function renderFooter(count) {
     var el = document.getElementById("footer-text");
     if (!el) return;
     el.textContent = site.footer || "© " + site.name;
+    el.style.setProperty("--i", String((count || 0) + 3));
   }
 
   /* ---------- 실행 ---------- */
   applyTheme(site.theme);
   renderProfile();
-  renderLinks();
-  renderFooter();
+  var linkCount = renderLinks();
+  renderFooter(linkCount);
 })();

@@ -365,7 +365,9 @@ body {
   color: var(--text-faint);
 }
 
-/* ---------- 등장 애니메이션 ---------- */
+/* ---------- 등장 애니메이션 ----------
+   채우기(fill)를 forwards 로 두면 hover 의 transform 을 덮어쓰므로
+   backwards 만 사용합니다. (끝난 뒤에는 원래 스타일로 돌아감) */
 @keyframes rise {
   from {
     opacity: 0;
@@ -378,8 +380,7 @@ body {
 }
 
 .animate {
-  opacity: 0;
-  animation: rise 0.7s var(--ease) forwards;
+  animation: rise 0.7s var(--ease) backwards;
   animation-delay: calc(var(--i, 0) * 70ms);
 }
 
@@ -406,7 +407,7 @@ body {
     transition-duration: 0.001ms !important;
   }
   .animate {
-    opacity: 1;
+    animation: none;
   }
   .orb {
     animation: none;
