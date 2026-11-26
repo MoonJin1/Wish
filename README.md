@@ -92,7 +92,9 @@ footer: "© 위시",
 1. 저장소 **Settings → General** 맨 아래 **Danger Zone → Change repository visibility → Make public**.
    - GitHub 무료 플랜에서는 **비공개 저장소로는 Pages를 쓸 수 없습니다.** 공개로 바꿔야 합니다.
 2. **Settings → Pages** 에서 *Source* 를 **Deploy from a branch**, 브랜치를 **main**, 폴더를 **/(root)** 로 두고 **Save**.
-3. 1~2분 뒤 `https://moonjin1.github.io/` 에서 페이지가 열립니다.
+3. 1~2분 뒤 페이지가 열립니다. 주소는 저장소 이름에 따라 달라집니다.
+   - 저장소 이름이 지금처럼 **`Wish`** 라면 → `https://moonjin1.github.io/Wish/`
+   - 저장소 이름을 **`MoonJin1.github.io`** 로 바꾸면 → `https://moonjin1.github.io/` (이름을 바꿔도 파일은 그대로 남습니다.)
 
 > 공개로 바꾸면 이 저장소의 파일(사진 포함)을 누구나 볼 수 있습니다. 올리기 전에 개인정보가 없는지 한 번 더 확인하세요.
 
